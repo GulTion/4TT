@@ -22,8 +22,8 @@
     }
 
     const _get = (obj)=>{
-        // let _1 = _d();
-        let _1 = {day:2, min:47, hrs:12, sec:12}
+        let _1 = _d();
+        // let _1 = {day:2, min:47, hrs:12, sec:12}
         let _2 = obj[_1.day];
         let _3 = h2m(_1.hrs, _1.min);
         let _4;
@@ -93,7 +93,8 @@ const current = document.querySelector(".current");
 let _p = _get(_4TT);
 let _1 = _d()
 let _3 = m2h(h2m(_1.hrs, _1.min));
-log(_p)
+log(_p);
+document.title = _p?.is.subject||"Nothing";
 current.innerHTML = `
 <div class="sub">${_p?.is.subject||"Nothing"}</div>
 <div class="name">${_p?.is.teacher||""}</div>
